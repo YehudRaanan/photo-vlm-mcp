@@ -31,7 +31,19 @@ vision model from `ollama.com/search?c=vision`.
 
 ## Install
 
-From source:
+Directly from GitHub:
+
+```powershell
+python -m pip install "git+https://github.com/YehudRaanan/photo-vlm-mcp.git"
+```
+
+Or run without a persistent install using `uvx`:
+
+```powershell
+uvx --from "git+https://github.com/YehudRaanan/photo-vlm-mcp.git" photo-vlm-mcp --version
+```
+
+For local development:
 
 ```powershell
 git clone https://github.com/YehudRaanan/photo-vlm-mcp.git

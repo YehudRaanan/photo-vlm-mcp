@@ -4,6 +4,12 @@ This server uses MCP over stdio and is intentionally client-neutral.
 
 ## Claude Code
 
+Install first:
+
+```powershell
+python -m pip install "git+https://github.com/YehudRaanan/photo-vlm-mcp.git"
+```
+
 ```powershell
 claude mcp add photo-vlm --scope user -- photo-vlm-mcp
 ```
