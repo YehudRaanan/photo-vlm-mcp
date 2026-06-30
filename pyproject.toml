@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "photo-vlm-mcp"
+version = "0.1.0"
+description = "Local Ollama-backed MCP server for photo understanding, OCR, comparison, and metadata extraction."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "photo-vlm-mcp contributors" }]
+keywords = ["mcp", "ollama", "vision", "vlm", "photos", "ocr"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "httpx>=0.27",
+  "mcp>=1.0",
+  "pillow>=10.0",
+]
+
+[project.optional-dependencies]
+tesseract = ["pytesseract>=0.3.10"]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.23", "ruff>=0.6", "black>=24.0", "isort>=5.13"]
+
+[project.scripts]
+photo-vlm-mcp = "photo_vlm_mcp.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/photo-vlm-mcp/photo-vlm-mcp"
+Issues = "https://github.com/photo-vlm-mcp/photo-vlm-mcp/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+photo_vlm_mcp = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
