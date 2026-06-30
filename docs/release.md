@@ -28,7 +28,7 @@
 5. Create the public GitHub repository, then push:
 
    ```powershell
-   git remote add origin https://github.com/photo-vlm-mcp/photo-vlm-mcp.git
+   git remote add origin https://github.com/YehudRaanan/photo-vlm-mcp.git
    git push -u origin main
    ```
 

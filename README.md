@@ -34,7 +34,7 @@ vision model from `ollama.com/search?c=vision`.
 From source:
 
 ```powershell
-git clone https://github.com/photo-vlm-mcp/photo-vlm-mcp.git
+git clone https://github.com/YehudRaanan/photo-vlm-mcp.git
 cd photo-vlm-mcp
 python -m pip install -e .
 ```
